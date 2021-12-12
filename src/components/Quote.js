@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Center, NativeBaseProvider, Text } from "native-base";
+import { Button, Center, NativeBaseProvider, Text ,View} from "native-base";
 import { StyleSheet } from "react-native";
 
 export default function Quote() {
@@ -24,11 +24,12 @@ export default function Quote() {
   }
   return (
     <NativeBaseProvider style={styles.container}>
-         <Center>
+         <Center >
             <Text style={styles.quote}>{quote}</Text>
             <Text style={styles.author}>-{author}-</Text>
-         
-           <Button onPress={() => fetchNewQuote()}>generate a new quote</Button>
+            
+           <Button onPress={() => fetchNewQuote()}  >generate a new quote</Button>
+          
          </Center>
          </NativeBaseProvider>
         
@@ -39,18 +40,26 @@ const styles = StyleSheet.create({
     flex: 3,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop:48,
+    marginTop:60,
+    padding:14,
+
+    
   },
   quote:{
-    marginTop:100,
+    marginTop:60,
     marginBottom:23,
     fontSize:22,
     textAlign:"center",
-    color:"gray",
+    color:"white",
   },
   author:{
+    color:"white",
     alignItems: 'center',
     marginBottom:23,
     fontWeight:"bold",
+  },
+  button:{
+    color:"black",
+    marginTop:65,
   }
 });

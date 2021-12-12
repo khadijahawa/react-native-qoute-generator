@@ -6,6 +6,7 @@ import Quote from "./src/components/Quote";
 export default function App() {
   return (
     <View style={styles.container}>
+      <Text style={styles.header}>Random Quote </Text>
       <Quote/>
     </View>
   );
@@ -13,9 +14,19 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flex: 0.5,
+    backgroundColor: '#767C96',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header:{
+    marginBottom:12,
+    marginTop:45,
+    margin:30,
+    fontSize:30,
+    color: "white",
+    borderBottomColor: 'white',
+    borderBottomWidth: 1,
+   
+  }
 });
